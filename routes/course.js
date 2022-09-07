@@ -52,7 +52,7 @@ function course() {
             }
         } catch {
             res.status(500).json({
-                status: 'A error 500: Unexpected error',
+                status: 'A error --> 500: Unexpected error',
             })
         }
     }
