@@ -1,5 +1,6 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
+import { books } from 'googleapis/build/src/apis/books';
 
 const cursoRoutes = express.Router();
 const prisma = new PrismaClient();
@@ -61,7 +62,7 @@ function course() {
     return async (req, res) => {
         try {
             const courseId = req.params.courseId;
-            const userId = "cl7thnmlv0095mkmk22hxkt4c";
+            const userId = red.body.userId;
             let course = await prisma.userCourse.findMany({
                 where: {
                     courseId: courseId,
